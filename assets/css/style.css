@@ -1,0 +1,203 @@
+/* PALETA DE COLORES */
+:root {
+  --blanco: #ffffff;
+  --negro: #000000;
+  --azulOscuro: #002750;
+  --azulClaro: #0164BB;
+  --celesteOscuro: #369EE2;
+  --celesteClaro: #B2D4EA;
+  --amarillo: #FECF00;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+#body-carta {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(../img/fondo.png);
+}
+
+/* nav */
+
+#body-carta .nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+
+#body-carta .nav .nav__conteiner {
+  padding: 0 5%;
+  height: 75px;
+  background-color: var(--azulOscuro);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#body-carta .nav .nav__conteiner .nav__logo .nav-img {
+  height: 55px;
+  width: auto;
+}
+.nav__icon{
+  height: 40px;
+}
+
+.nav__links{
+  font-size: 1.8rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 75px;
+  right: 0;
+  background-color: var(--azulOscuro);
+  display: grid;
+  place-items: center;
+  clip-path: circle(0% at top right);
+  transition: clip-path 0.5s;
+  /* clip-path: circle(150% at top left); */
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--blanco);
+  border-bottom: 0.11rem solid var(--azulClaro);
+}
+
+.nav__links:target{
+  clip-path: circle(150% at top left);
+}
+
+/* header - menu */
+
+#body-carta .menu-header {
+  margin-top: 75px;
+  background: var(--azulClaro);
+  height: calc(100vh - 75px);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#body-carta .menu-header .header-img {
+  text-align: center;
+}
+
+#body-carta .menu-header .header-img img{
+  width: 75%;   
+  /*X*/
+  height: auto;
+  max-height: 800px;
+  /*Y*/
+  object-fit: cover;
+}
+
+#body-carta .menu-conteiner {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+#body-carta .menu-conteiner .menu-titulo {
+  height: 126px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+#body-carta .menu-conteiner .menu-titulo h2 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--blanco);
+  /* margin-top: 75px; */
+  /* margin-bottom: 1rem; */
+  background-color: var(--azulClaro);
+  text-align: center;
+  height: 46px;
+  width: 100%;
+}
+
+#body-carta .menu-conteiner .menu-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 0.125rem dashed var(--amarillo);
+  display: flex;
+  justify-content: space-between;
+}
+
+#body-carta .menu-conteiner .menu-item .text-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#body-carta .menu-conteiner .menu-item .text-info h3 {
+  font-size: 1.2rem;
+  color: var(--azulClaro);
+  white-space: wrap;
+}
+
+#body-carta .menu-conteiner .menu-item .text-info p {
+  color: var(--negro);
+  /* margin-top: 0.3rem; */
+  margin-left: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+#body-carta .menu-conteiner .menu-item h3 {
+  font-size: 1.2rem;
+  color: var(--azulOscuro);
+  white-space: nowrap;
+}
+
+#body-carta .menu-conteiner .img-conteiner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+#body-carta .menu-conteiner .img-conteiner .menu-img {
+  max-width: 800px;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  -webkit-mask-image: 
+    linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  mask-image: 
+    linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-composite: intersect;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+}
+
+#body-carta .menu-conteiner .img-conteiner .menu-img img {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  justify-items: center;
+  align-items: center;
+}
+
+#body-carta .menu-footer {
+  background: var(--azulOscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
